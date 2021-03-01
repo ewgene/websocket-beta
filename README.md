@@ -1,6 +1,6 @@
 # websocket-beta
 
-## Project setup
+## Frontend setup
 ```
 yarn install
 ```
@@ -22,3 +22,10 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Websocket server setup
+```
+cd server
+yarn install
+
+## Frontend connects to ws://localhost:8000 
