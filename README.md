@@ -27,5 +27,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 cd server
 yarn install
+yarn start
 
 ## Frontend connects to ws://localhost:8000 
