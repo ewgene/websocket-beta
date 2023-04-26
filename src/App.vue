@@ -97,7 +97,7 @@ export default {
 
 	created: function() {
 		console.log("Starting connection to WebSocket Server")
-		this.connection = new WebSocket("ws://localhost:8000/")
+		this.connection = new WebSocket("ws://127.0.0.1:8000")
 		moment.locale('ru')
 
 		const self = this
@@ -110,9 +110,9 @@ export default {
 				self.messages.push(JSON.parse(event.data))
 			} else {
 				self.timeNow = new Date().getTime()
-				console.log(JSON.stringify(self.dummy))
-				this.$emit('sendMessage', JSON.stringify(self.dummy));
+				this.$emit('sendMessage', JSON.stringify(self.dummy))
 			}
+			console.log(event.data)
 		}
 
 		this.connection.onopen = function(event) {

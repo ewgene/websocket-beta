@@ -4,10 +4,13 @@
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
+		"dev": "concurrently \"cd server && npm run start\" \"yarn serve\"",
+		"build": "concurrently \"cd server && npm run start\" \"yarn build\"",
+		"build:lock": "vue-cli-service build",
 		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
+		"concurrently": "^8.0.1",
 		"core-js": "^3.6.5",
 		"moment": "^2.29.1",
 		"vue": "^2.6.11",
